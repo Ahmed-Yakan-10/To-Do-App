@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:todoapp/constants.dart';
 import 'package:todoapp/services/theme_services.dart';
 import 'package:todoapp/views/notification_view.dart';
+import 'package:todoapp/widgets/custom_button.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -13,7 +14,6 @@ class HomeView extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: kPrimaryColor,
         title: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Padding(
               padding: const EdgeInsets.all(8.0),
@@ -42,9 +42,23 @@ class HomeView extends StatelessWidget {
                 ),
               );
             },
-            icon: Icon(Icons.light_mode_outlined),
+            icon: Padding(
+              padding: const EdgeInsets.only(right: 8.0),
+              child: Icon(
+                Icons.light_mode_outlined,
+                color: Colors.white,
+              ),
+            ),
           ),
         ],
+      ),
+      body: Center(
+        child: CustomButton(
+          onTap: () {
+            print('object');
+          },
+          text: 'Add Task',
+        ),
       ),
     );
   }

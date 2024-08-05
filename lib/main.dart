@@ -8,12 +8,14 @@ import 'package:todoapp/themes.dart';
 import 'package:todoapp/views/home_view.dart';
 import 'package:todoapp/views/notification_view.dart';
 
-void main() => runApp(
-      DevicePreview(
-        enabled: !kReleaseMode,
-        builder: (context) => TODO(), // Wrap your app
-      ),
-    );
+void main() {
+  runApp(
+    DevicePreview(
+      enabled: !kReleaseMode,
+      builder: (context) => TODO(), // Wrap your app
+    ),
+  );
+}
 
 class TODO extends StatelessWidget {
   const TODO({super.key});

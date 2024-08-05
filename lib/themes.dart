@@ -9,11 +9,13 @@ const Color darkHeaderClr = Color(0xFF424242);
 
 class Themes {
   static final light = ThemeData(
+    fontFamily: kFont,
     primaryColor: kAppBarColor,
     scaffoldBackgroundColor: kAppBarColor,
     brightness: Brightness.light,
   );
   static final dark = ThemeData(
+    fontFamily: kFont,
     primaryColor: darkGreyClr,
     scaffoldBackgroundColor: darkHeaderClr,
     brightness: Brightness.dark,
