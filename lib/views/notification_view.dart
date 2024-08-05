@@ -36,7 +36,7 @@ class _NotificationViewState extends State<NotificationView> {
         title: Text(
           _payLoad.toString().split('|')[0],
           style: TextStyle(
-            color: Get.isDarkMode ? darkGreyClr : Colors.white,
+            color: Get.isDarkMode ? Colors.white : darkGreyClr ,
             fontSize: 32,
             fontWeight: FontWeight.bold,
           ),
@@ -55,7 +55,7 @@ class _NotificationViewState extends State<NotificationView> {
                 Text(
                   'Hi, Ahmed',
                   style: TextStyle(
-                    color: Get.isDarkMode ? darkGreyClr : Colors.white,
+                    color: Get.isDarkMode ? Colors.white : darkGreyClr ,
                     fontSize: 26,
                     fontWeight: FontWeight.bold,
                   ),
@@ -66,7 +66,7 @@ class _NotificationViewState extends State<NotificationView> {
                 Text(
                   'You have a new reminder !',
                   style: TextStyle(
-                    color: Get.isDarkMode ? darkGreyClr : Colors.grey[300],
+                    color: Get.isDarkMode ? Colors.grey[300] : darkGreyClr ,
                     fontSize: 18,
                   ),
                 ),

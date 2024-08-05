@@ -5,6 +5,7 @@ import 'package:todoapp/constants.dart';
 import 'package:device_preview/device_preview.dart';
 import 'package:todoapp/services/theme_services.dart';
 import 'package:todoapp/themes.dart';
+import 'package:todoapp/views/add_task_view.dart';
 import 'package:todoapp/views/home_view.dart';
 import 'package:todoapp/views/notification_view.dart';
 
@@ -23,6 +24,9 @@ class TODO extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      routes: {
+        AddTaskView.id: (context)=>AddTaskView(),
+      },
       useInheritedMediaQuery: true,
       locale: DevicePreview.locale(context),
       builder: DevicePreview.appBuilder,

@@ -2,12 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:todoapp/constants.dart';
 import 'package:todoapp/services/theme_services.dart';
+import 'package:todoapp/views/add_task_view.dart';
 import 'package:todoapp/views/notification_view.dart';
-import 'package:todoapp/widgets/custom_button.dart';
 
-class HomeView extends StatelessWidget {
+class HomeView extends StatefulWidget {
   const HomeView({super.key});
 
+  @override
+  State<HomeView> createState() => _HomeViewState();
+}
+
+class _HomeViewState extends State<HomeView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,32 +38,57 @@ class HomeView extends StatelessWidget {
           ],
         ),
         actions: [
-          IconButton(
-            onPressed: () {
-              ThemeServices().switchTheme();
-              Get.to(
-                NotificationView(
-                  payLoad: 'Title Content|Description content|Time : 7:00',
+          Padding(
+            padding: const EdgeInsets.all(4),
+            child: IconButton(
+              onPressed: () {
+                Get.to(
+                  NotificationView(
+                    payLoad: 'Title Content|Description content|Time : 7:00',
+                  ),
+                );
+              },
+              icon: Padding(
+                padding: const EdgeInsets.only(right: 8.0),
+                child: Icon(
+                  Icons.notifications_active_outlined,
+                  color: Colors.white,
                 ),
-              );
-            },
-            icon: Padding(
-              padding: const EdgeInsets.only(right: 8.0),
-              child: Icon(
-                Icons.light_mode_outlined,
-                color: Colors.white,
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(4),
+            child: IconButton(
+              onPressed: () {
+                ThemeServices().switchTheme();
+                setState(() {});
+              },
+              icon: Get.isDarkMode
+              ? Padding(
+                padding: const EdgeInsets.only(right: 8.0),
+                child: Icon(
+                  Icons.light_mode_outlined,
+                  color: Colors.white,
+                ),
+              )
+              :  Padding(
+                padding: const EdgeInsets.only(right: 8.0),
+                child: Icon(
+                  Icons.dark_mode_outlined,
+                  color: Colors.white,
+                ),
               ),
             ),
           ),
         ],
       ),
-      body: Center(
-        child: CustomButton(
-          onTap: () {
-            print('object');
-          },
-          text: 'Add Task',
-        ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.pushNamed(context, AddTaskView.id);
+        },
+        backgroundColor: Colors.white,
+        child: Icon(Icons.add, color: Colors.black,),
       ),
     );
   }

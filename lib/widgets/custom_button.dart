@@ -17,7 +17,7 @@ class CustomButton extends StatelessWidget {
           vertical: 12,
         ),
         child: Container(
-          width: double.infinity,
+          width: 100,
           height: 45,
           decoration: BoxDecoration(
             color: kSecondaryColor,
@@ -29,7 +29,7 @@ class CustomButton extends StatelessWidget {
               textAlign: TextAlign.center,
               style: TextStyle(
                 color: Colors.white,
-                fontSize: 24,
+                fontSize: 18,
                 fontWeight: FontWeight.bold,
               ),
             ),
