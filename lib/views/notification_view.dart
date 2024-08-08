@@ -44,140 +44,143 @@ class _NotificationViewState extends State<NotificationView> {
         centerTitle: true,
       ),
       body: SafeArea(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const SizedBox(
-              height: 20,
-            ),
-            Column(
-              children: [
-                Text(
-                  'Hi, Ahmed',
-                  style: TextStyle(
-                    color: Get.isDarkMode ? Colors.white : darkGreyClr ,
-                    fontSize: 26,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                const SizedBox(
-                  height: 10,
-                ),
-                Text(
-                  'You have a new reminder !',
-                  style: TextStyle(
-                    color: Get.isDarkMode ? Colors.grey[300] : darkGreyClr ,
-                    fontSize: 18,
-                  ),
-                ),
-              ],
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            Expanded(
-              child: Container(
-                padding: EdgeInsets.symmetric(horizontal: 30),
-                margin: EdgeInsets.symmetric(horizontal: 30),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(24),
-                  color: kColors[7],
-                ),
-                child: SingleChildScrollView(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const SizedBox(height: 30),
-                      Row(
-                        children: [
-                          Icon(
-                            Icons.text_format,
-                            color: Colors.white,
-                            size: 28,
-                          ),
-                          SizedBox(width: 20),
-                          Text(
-                            'Title',
-                            style: TextStyle(
-                              fontSize: 32,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white,
-                            ),
-                          )
-                        ],
-                      ),
-                      const SizedBox(height: 15),
-                      Text(
-                        _payLoad.toString().split('|')[0],
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      const SizedBox(height: 25),
-                      Row(
-                        children: [
-                          Icon(
-                            Icons.description,
-                            color: Colors.white,
-                            size: 28,
-                          ),
-                          SizedBox(width: 20),
-                          Text(
-                            'Description',
-                            style: TextStyle(
-                              fontSize: 32,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white,
-                            ),
-                          )
-                        ],
-                      ),
-                      const SizedBox(height: 15),
-                      Text(
-                        _payLoad.toString().split('|')[1],
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                        ),
-                        textAlign: TextAlign.justify,
-                      ),
-                      const SizedBox(height: 25),
-                      Row(
-                        children: [
-                          Icon(
-                            Icons.calendar_today_outlined,
-                            color: Colors.white,
-                            size: 28,
-                          ),
-                          SizedBox(width: 20),
-                          Text(
-                            'Date',
-                            style: TextStyle(
-                              fontSize: 32,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white,
-                            ),
-                          )
-                        ],
-                      ),
-                      const SizedBox(height: 15),
-                      Text(
-                        _payLoad.toString().split('|')[2],
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 8*2),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const SizedBox(
+                height: 20,
               ),
-            )
-          ],
+              Column(
+                children: [
+                  Text(
+                    'Hi, Ahmed',
+                    style: TextStyle(
+                      color: Get.isDarkMode ? Colors.white : darkGreyClr ,
+                      fontSize: 26,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  Text(
+                    'You have a new reminder !',
+                    style: TextStyle(
+                      color: Get.isDarkMode ? Colors.grey[300] : darkGreyClr ,
+                      fontSize: 18,
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              Expanded(
+                child: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 30),
+                  margin: EdgeInsets.symmetric(horizontal: 30),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(24),
+                    color: kColors[7],
+                  ),
+                  child: SingleChildScrollView(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const SizedBox(height: 30),
+                        Row(
+                          children: [
+                            Icon(
+                              Icons.text_format,
+                              color: Colors.white,
+                              size: 28,
+                            ),
+                            SizedBox(width: 20),
+                            Text(
+                              'Title',
+                              style: TextStyle(
+                                fontSize: 32,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
+                              ),
+                            )
+                          ],
+                        ),
+                        const SizedBox(height: 15),
+                        Text(
+                          _payLoad.toString().split('|')[0],
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        const SizedBox(height: 25),
+                        Row(
+                          children: [
+                            Icon(
+                              Icons.description,
+                              color: Colors.white,
+                              size: 28,
+                            ),
+                            SizedBox(width: 20),
+                            Text(
+                              'Description',
+                              style: TextStyle(
+                                fontSize: 32,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
+                              ),
+                            )
+                          ],
+                        ),
+                        const SizedBox(height: 15),
+                        Text(
+                          _payLoad.toString().split('|')[1],
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                          ),
+                          textAlign: TextAlign.justify,
+                        ),
+                        const SizedBox(height: 25),
+                        Row(
+                          children: [
+                            Icon(
+                              Icons.calendar_today_outlined,
+                              color: Colors.white,
+                              size: 28,
+                            ),
+                            SizedBox(width: 20),
+                            Text(
+                              'Date',
+                              style: TextStyle(
+                                fontSize: 32,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
+                              ),
+                            )
+                          ],
+                        ),
+                        const SizedBox(height: 15),
+                        Text(
+                          _payLoad.toString().split('|')[2],
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );

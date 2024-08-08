@@ -56,7 +56,7 @@ class _AddTaskViewState extends State<AddTaskView> {
         centerTitle: true,
       ),
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 12),
+        padding: const EdgeInsets.symmetric(horizontal: 16),
         child: Center(
           child: Column(
             children: [
@@ -131,6 +131,8 @@ class _AddTaskViewState extends State<AddTaskView> {
                         ),
                       )
                       .toList(),
+                  elevation: 4,
+                  underline: Container(height: 0),
                   icon: Icon(Icons.keyboard_arrow_down_sharp),
 
                 ),
@@ -153,6 +155,8 @@ class _AddTaskViewState extends State<AddTaskView> {
                     ),
                   )
                       .toList(),
+                  elevation: 4,
+                  underline: Container(height: 0),
                   icon: Icon(Icons.keyboard_arrow_down_sharp),
 
                 ),

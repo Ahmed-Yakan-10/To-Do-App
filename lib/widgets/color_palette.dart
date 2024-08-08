@@ -38,10 +38,10 @@ class _ColorPaletteState extends State<ColorPalette> {
               child: Padding(
                 padding: const EdgeInsets.all(4),
                 child: CircleAvatar(
-                  radius: 20,
+                  radius: 18,
                   backgroundColor: Get.isDarkMode ? Colors.white : darkGreyClr.withOpacity(0.5),
                   child: CircleAvatar(
-                    radius: 18,
+                    radius: 16,
                     child: selectedColor == index
                         ? Icon(
                             Icons.done,
